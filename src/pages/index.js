@@ -2,8 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import { header, btn } from "../styles/home.module.css"
+import { StaticImage } from "gatsby-plugin-image"
 
-const Home = () => {
+const Home = ({ data }) => {
   return (
     <Layout>
       <section className={header}>
@@ -15,7 +16,7 @@ const Home = () => {
             My Portfolio Projects
           </Link>
         </div>
-        <img src="/banner.png" alt="site banner" style={{ maxWidth: "100%" }} />
+        <StaticImage src="../images/banner.png" alt="banner image" />
       </section>
     </Layout>
   )
